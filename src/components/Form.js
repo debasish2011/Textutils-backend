@@ -1,8 +1,13 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export default function Form(props) {
-  return (<>
-    <input type="email" className="input"/>
-  </>);
+  return (
+    <>
+      <textarea
+        class="form-control"
+        id="exampleFormControlTextarea1"
+        rows="8"
+      ></textarea>
+    </>
+  );
 }

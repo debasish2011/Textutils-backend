@@ -1,4 +1,4 @@
-// import './App.css';
+import "./App.css";
 
 import Form from "./components/Form";
 import Navbar from "./components/Navbar";
@@ -6,8 +6,11 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <>
-      <Navbar title='Textutils'/>
-      <Form/>
+      <Navbar title="Textutils" />
+      <div className="container my-3">
+        <h2><label for="exampleFormControlTextarea1" class="form-label">Enter text to analyse</label></h2>
+        <Form />
+      </div>
     </>
   );
 }
