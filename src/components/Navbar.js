@@ -7,7 +7,7 @@ export default function Navbar(props) {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            Navbar
+            {props.title}
           </a>
           <button
             className="navbar-toggler"
@@ -32,7 +32,7 @@ export default function Navbar(props) {
                   Link
                 </a>
               </li>
-              <li className="nav-item dropdown">
+              {/* <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
                   href="#"
@@ -73,7 +73,7 @@ export default function Navbar(props) {
                 >
                   Disabled
                 </a>
-              </li>
+              </li> */}
             </ul>
             <form className="d-flex">
               <input
@@ -92,3 +92,11 @@ export default function Navbar(props) {
     </>
   );
 }
+
+Navbar.prototype = {
+    title : PropTypes.string
+}
+
+Navbar.defaultProps = {
+    title : 'Title'
+  }
