@@ -5,13 +5,16 @@ export default function Navbar(props) {
   const [mode, setMode] = useState('light');
   const [modetext, setModeText] = useState('Enable Dark Mode');
   const changeMode = ()=>{
+    let textclr = document.getElementById('btntextclr')
     if (mode === 'light') {
       setMode('dark');
       setModeText('Enable Light Mode');
+      textclr.style.color = 'white';
     }
     else{
       setMode('light');
       setModeText('Enable Dark Mode');
+      textclr.style.color = 'black';
     }
   };
   return (
@@ -106,7 +109,7 @@ export default function Navbar(props) {
               id="flexSwitchCheckDefault"
               onClick={changeMode}
             />
-            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
+            <label id="btntextclr" className="form-check-label" htmlFor="flexSwitchCheckDefault">
               {modetext}
             </label>
           </div>
