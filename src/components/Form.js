@@ -4,7 +4,7 @@ export default function Form(props) {
   return (
     <>
       <textarea
-        class="form-control"
+        className="form-control"
         id="exampleFormControlTextarea1"
         rows="8"
       ></textarea>
