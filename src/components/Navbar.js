@@ -106,7 +106,7 @@ export default function Navbar(props) {
               id="flexSwitchCheckDefault"
               onClick={changeMode}
             />
-            <label className={`form-check-label ${mode}`} htmlFor="flexSwitchCheckDefault">
+            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
               {modetext}
             </label>
           </div>
