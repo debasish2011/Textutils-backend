@@ -19,6 +19,10 @@ export default function Form() {
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "));
   };
+  const textReverse = () => {
+    let newText = text.split(" ").reverse().join(" ");
+    setText(newText);
+  };
   const copyText = () => {
     let newText = document.getElementById("form");
     newText.select();
@@ -56,6 +60,9 @@ export default function Form() {
         </button>
         <button className="btn btn-blue" onClick={removeExtraSpaces}>
           Remove Extra Spaces
+        </button>
+        <button className="btn btn-blue" onClick={textReverse}>
+          Reverse Text
         </button>
       </div>
       <div className="column-flex container summary">
