@@ -48,7 +48,7 @@ export default function Form() {
       </div>
       <div className="flex container btnarea">
         <button
-          disabled={text.length == 0}
+          disabled={text.length === 0}
           className="btn btn-blue"
           onClick={changeToUppercase}
         >
@@ -95,7 +95,7 @@ export default function Form() {
         <p>
           {
             text.split(" ").filter((element) => {
-              return element.length != 0;
+              return element.length !== 0;
             }).length
           }{" "}
           words and {text.length} characters
@@ -103,7 +103,7 @@ export default function Form() {
         <p>
           {0.008 *
             text.split(" ").filter((element) => {
-              return element.length != 0;
+              return element.length !== 0;
             }).length}{" "}
           Minutes to read
         </p>
