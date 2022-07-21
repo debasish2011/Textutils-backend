@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body{
+    transition: all ease-in-out 0.3s;
+}
+
 .container {
     width: 90vw;
     margin: 5px auto;
@@ -63,6 +67,7 @@
     padding: 0.375rem 0.75rem;
     border-radius: 5px;
     transition: all ease-in 0.15s;
+    font-weight: 600;
 }
 
 .btn-blue{

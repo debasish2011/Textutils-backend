@@ -1,15 +1,19 @@
 import React from "react";
-import "../css/navbar.css"
+import "../css/navbar.css";
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <>
-      <nav className="navbar">
-        <div className="space-between navlink">
+      <nav className="navbar space-between">
+        <div className="navlink">
           <a className="homeLink" href="/">
             Textutils
           </a>
         </div>
+        <button
+          id="darkModeEnablerDisabler"
+          onClick={props.modeChangeFunction}
+        >Enable {props.backgroundMode}Mode</button>
       </nav>
     </>
   );

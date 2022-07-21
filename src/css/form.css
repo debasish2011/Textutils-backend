@@ -8,3 +8,7 @@
     flex-wrap: wrap;
     padding: 5px;
 }
+
+.summary p{
+    padding: 5px;
+}
