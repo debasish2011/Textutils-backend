@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Form from "./components/Form";
 
 function App() {
-  const [mode, setmode] = useState("Light");
+  const [mode, setmode] = useState("Night");
   const toggleMode = () => {
     if (mode === "Light") {
       setmode("Night");
