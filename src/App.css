@@ -59,7 +59,7 @@
 
 .btn {
     border-width: 0px;
-    margin: 0px 5px;
+    margin: 5px;
     padding: 0.375rem 0.75rem;
     border-radius: 5px;
     transition: all ease-in 0.15s;
