@@ -75,7 +75,13 @@ export default function Form() {
           }{" "}
           words and {text.length} characters
         </p>
-        <p>{0.008 * text.split(" ").length} Minutes to read</p>
+        <p>
+          {0.008 *
+            text.split(" ").filter((element) => {
+              return element.length != 0;
+            }).length}{" "}
+          Minutes to read
+        </p>
         <h3>Preview</h3>
         <p>{text}</p>
       </div>
