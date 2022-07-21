@@ -3,3 +3,8 @@
     padding: 5px;
     border: 1px solid rgb(118, 118, 118);
 }
+
+.btnarea{
+    flex-wrap: wrap;
+    padding: 5px;
+}

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../css/form.css";
 
 export default function Form() {
-  const [text, setText] = useState("Enter text here");
+  const [text, setText] = useState("");
   const handleOnChange = (event) => {
     setText(event.target.value);
   };
@@ -12,9 +12,21 @@ export default function Form() {
   const changeToLowercase = () => {
     setText(text.toLowerCase());
   };
+  const clearText = () => {
+    setText("");
+  };
+  const removeExtraSpaces = () => {
+    let newText = text.split(/[ ]+/);
+    setText(newText.join(" "));
+  };
+  const copyText = () => {
+    let newText = document.getElementById("form");
+    newText.select();
+    navigator.clipboard.writeText(newText.value);
+  };
   return (
     <>
-      <div className="column_flex container">
+      <div className="column-flex container">
         <h2>
           <label htmlFor="form" className="form-label">
             Enter text to analyse
@@ -24,6 +36,7 @@ export default function Form() {
           id="form"
           cols="30"
           rows="10"
+          placeholder="Enter text here"
           value={text}
           onChange={handleOnChange}
         ></textarea>
@@ -35,6 +48,24 @@ export default function Form() {
         <button className="btn btn-blue" onClick={changeToLowercase}>
           Convert to Lowercase
         </button>
+        <button className="btn btn-blue" onClick={clearText}>
+          Clear Text
+        </button>
+        <button className="btn btn-blue" onClick={copyText}>
+          Copy Text
+        </button>
+        <button className="btn btn-blue" onClick={removeExtraSpaces}>
+          Remove Extra Spaces
+        </button>
+      </div>
+      <div className="column-flex container summary">
+        <h2>Text Summary</h2>
+        <p>
+          {text.split(" ").length} words and {text.length} characters
+        </p>
+        <p>{0.008 * text.split(" ").length} Minutes to read</p>
+        <h3>Preview</h3>
+        <p>{text}</p>
       </div>
     </>
   );

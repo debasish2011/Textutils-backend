@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="navbar">
-        <div className="space_between navlink">
+        <div className="space-between navlink">
           <a className="homeLink" href="/">
             Textutils
           </a>
