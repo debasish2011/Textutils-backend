@@ -27,6 +27,7 @@ export default function Form() {
     let newText = document.getElementById("form");
     newText.select();
     navigator.clipboard.writeText(newText.value);
+    document.getSelection().removeAllRanges();
   };
   return (
     <>
@@ -46,22 +47,46 @@ export default function Form() {
         ></textarea>
       </div>
       <div className="flex container btnarea">
-        <button disabled={text.length==0} className="btn btn-blue" onClick={changeToUppercase}>
+        <button
+          disabled={text.length == 0}
+          className="btn btn-blue"
+          onClick={changeToUppercase}
+        >
           Convert to Uppercase
         </button>
-        <button disabled={text.length===0} className="btn btn-blue" onClick={changeToLowercase}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-blue"
+          onClick={changeToLowercase}
+        >
           Convert to Lowercase
         </button>
-        <button disabled={text.length===0} className="btn btn-blue" onClick={clearText}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-blue"
+          onClick={clearText}
+        >
           Clear Text
         </button>
-        <button disabled={text.length===0} className="btn btn-blue" onClick={copyText}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-blue"
+          onClick={copyText}
+        >
           Copy Text
         </button>
-        <button disabled={text.length===0} className="btn btn-blue" onClick={removeExtraSpaces}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-blue"
+          onClick={removeExtraSpaces}
+        >
           Remove Extra Spaces
         </button>
-        <button disabled={text.length===0} className="btn btn-blue" onClick={textReverse}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-blue"
+          onClick={textReverse}
+        >
           Reverse Text
         </button>
       </div>
@@ -83,7 +108,7 @@ export default function Form() {
           Minutes to read
         </p>
         <h3>Preview</h3>
-        <p>{text.length>0?text:"Nothing to preview"}</p>
+        <p>{text.length > 0 ? text : "Nothing to preview"}</p>
       </div>
     </>
   );
