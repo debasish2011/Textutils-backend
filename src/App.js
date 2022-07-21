@@ -1,16 +1,18 @@
 import "./App.css";
 
-import React from 'react'
-import Form from "./components/Form";
+import React from "react";
 import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
-      <Navbar title="Textutils"/>
+      <Navbar />
       <div className="container my-3">
-        <h2><label htmlFor="exampleFormControlTextarea1" className="form-label">Enter text to analyse</label></h2>
-        <Form/>
+        <h2>
+          <label htmlFor="exampleFormControlTextarea1" className="form-label">
+            Enter text to analyse
+          </label>
+        </h2>
       </div>
     </>
   );

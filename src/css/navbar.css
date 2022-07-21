@@ -1,0 +1,19 @@
+.navbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    padding: 15px;
+    background-color: #261965;
+    z-index: 1;
+}
+
+.navlink {
+    flex-direction: row;
+    align-items: center;
+}
+
+.homeLink {
+    text-decoration: none;
+    color: white;
+    font-size: 1.8rem;
+}
