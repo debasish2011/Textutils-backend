@@ -4,8 +4,6 @@
 }
 
 .container {
-    display: flex;
-    align-items: center;
     width: 90vw;
     margin: 5px auto;
 }
@@ -80,6 +78,10 @@
 
 .bold {
     font-weight: bold;
+}
+
+.btnarea{
+    flex-wrap: wrap;
 }
 
 @media only screen and (max-width: 850px) {}
