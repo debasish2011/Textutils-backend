@@ -6,7 +6,7 @@ export default function Navbar(props) {
     <>
       <nav className="navbar space-between">
         <div className="navlink">
-          <a className="homeLink" href="/">
+          <a className="homeLink" href="/Textutils">
             TextUtils
           </a>
         </div>
