@@ -23,6 +23,10 @@ export default function Form() {
     let newText = text.split(" ").reverse().join(" ");
     setText(newText);
   };
+  const textMirror = () => {
+    let newText = text.split('').reverse().join('');
+    setText(newText);
+  };
   const copyText = () => {
     let newText = document.getElementById("form");
     newText.select();
@@ -88,6 +92,13 @@ export default function Form() {
           onClick={textReverse}
         >
           Reverse Text
+        </button>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-blue"
+          onClick={textMirror}
+        >
+          Mirror Text
         </button>
       </div>
       <div className="column-flex container summary">
