@@ -3,11 +3,6 @@
     padding: 0;
 }
 
-body{
-    transition: color ease-in-out 0.3s;
-    transition: background-color ease-in-out 0.3s;
-}
-
 .container {
     width: 90vw;
     margin: 5px auto;
@@ -62,6 +57,10 @@ body{
     align-items: center;
 }
 
+.align-baseline{
+    align-items: baseline;
+}
+
 .btn {
     border-width: 0px;
     margin: 2px 3px;
@@ -102,4 +101,18 @@ body{
     font-weight: bold;
 }
 
-@media only screen and (max-width: 850px) {}
+.form-input{
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}

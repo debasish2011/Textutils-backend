@@ -38,7 +38,7 @@ const Signup = () => {
           </label>
           <input
             type="text"
-            className="form-control"
+            className="form-input"
             id="name"
             value={credentials.name}
             onChange={handleOnChanege}
@@ -50,7 +50,7 @@ const Signup = () => {
           </label>
           <input
             type="email"
-            className="form-control"
+            className="form-input"
             id="email"
             aria-describedby="emailHelp"
             value={credentials.email}
@@ -66,7 +66,7 @@ const Signup = () => {
           </label>
           <input
             type="password"
-            className="form-control"
+            className="form-input"
             id="password"
             value={credentials.password}
             onChange={handleOnChanege}
@@ -80,7 +80,7 @@ const Signup = () => {
           </label>
           <input
             type="password"
-            className="form-control"
+            className="form-input"
             id="cpassword"
             value={credentials.cpassword}
             onChange={handleOnChanege}

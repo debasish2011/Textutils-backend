@@ -32,12 +32,12 @@ const Login = () => {
       <div className="container my-3">
         <form onSubmit={handleClickLogin}>
           <div className="mb-3">
-            <label htmlFor="exampleInputEmail1" className="form-label">
+            <label htmlFor="email" className="form-label">
               Email address
             </label>
             <input
               type="email"
-              className="form-control"
+              className="form-input"
               id="email"
               aria-describedby="emailHelp"
               value={credentials.email}
@@ -48,12 +48,12 @@ const Login = () => {
             </div>
           </div>
           <div className="mb-3">
-            <label htmlFor="exampleInputPassword1" className="form-label">
+            <label htmlFor="password" className="form-label">
               Password
             </label>
             <input
               type="password"
-              className="form-control"
+              className="form-input"
               id="password"
               value={credentials.password}
               onChange={handleOnChanege}

@@ -16,7 +16,7 @@ router.get("/fetchalltexts", fetchUser, async (req, res) => {
 
 router.post(
   "/addtext",
-  [body("text").exists()],
+  [body("description").exists()],
   fetchUser,
   async (req, res) => {
     const errors = validationResult(req);

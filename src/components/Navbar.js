@@ -11,7 +11,7 @@ export default function Navbar(props) {
   };
   return (
     <>
-      <nav className="navbar navbar-dark navbar-expand-lg" style={{ color: "white" }}>
+      <nav className="navbar navbar-dark navbar-expand-lg">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             TextUtils
@@ -77,12 +77,6 @@ export default function Navbar(props) {
                 Logout
               </button>
             )}
-              <button
-                id="darkModeEnablerDisabler"
-                onClick={props.modeChangeFunction}
-              >
-                Enable {props.backgroundMode}Mode
-              </button>
             </div>
           </div>
         </div>

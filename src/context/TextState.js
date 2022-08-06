@@ -6,7 +6,7 @@ const TextState = (props) => {
   const host = "http://localhost:5000";
 
   const getTexts = async () => {
-    const response = await fetch(`${host}/api/search/fetchalltexts`, {
+    const response = await fetch(`${host}/api/text/fetchalltexts`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -44,7 +44,7 @@ const TextState = (props) => {
     const newTexts = texts.filter((text) => {
       return text._id !== id;
     });
-    setNotes(newTexts);
+    setTexts(newTexts);
   };
 
   return (

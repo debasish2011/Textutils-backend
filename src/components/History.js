@@ -18,7 +18,7 @@ const History = () => {
     <>
       <div className="container my-3">
         <h3>Your History</h3>
-        <div className="flex">
+        <div className="coloum-flex">
           <p>{texts.length === 0 && "No History to display."}</p>
           {texts.map((text) => {
             return <Textitem key={text._id} text={text} />;

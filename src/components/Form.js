@@ -1,31 +1,51 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import TextContext from "../context/TextContext";
 import "../css/form.css";
 
 export default function Form() {
+  const { addText } = useContext(TextContext);
   const [text, setText] = useState("");
-  const handleOnChange = (event) => {
-    setText(event.target.value);
+  const handleOnChange = (e) => {
+    setText(e.target.value);
   };
   const changeToUppercase = () => {
-    setText(text.toUpperCase());
+    let modifiedText = text.toUpperCase();
+    setText(modifiedText);
+    if (localStorage.getItem("token")) {
+      addText(modifiedText);
+    }
   };
   const changeToLowercase = () => {
-    setText(text.toLowerCase());
+    let modifiedText = text.toLowerCase();
+    setText(modifiedText);
+    if (localStorage.getItem("token")) {
+      addText(modifiedText);
+    }
   };
   const clearText = () => {
     setText("");
   };
   const removeExtraSpaces = () => {
     let newText = text.split(/[ ]+/);
-    setText(newText.join(" "));
+    let modifiedText = newText.join(" ");
+    setText(modifiedText);
+    if (localStorage.getItem("token")) {
+      addText(modifiedText);
+    }
   };
   const textReverse = () => {
-    let newText = text.split(" ").reverse().join(" ");
-    setText(newText);
+    let modifiedText = text.split(" ").reverse().join(" ");
+    setText(modifiedText);
+    if (localStorage.getItem("token")) {
+      addText(modifiedText);
+    }
   };
   const textMirror = () => {
-    let newText = text.split('').reverse().join('');
-    setText(newText);
+    let modifiedText = text.split("").reverse().join("");
+    setText(modifiedText);
+    if (localStorage.getItem("token")) {
+      addText(modifiedText);
+    }
   };
   const copyText = () => {
     let newText = document.getElementById("form");
@@ -37,12 +57,12 @@ export default function Form() {
     <>
       <div className="column-flex container">
         <h2>
-          <label htmlFor="form" className="form-label">
+          <label htmlFor="description" className="form-label">
             Enter text to analyse
           </label>
         </h2>
         <textarea
-          id="form"
+          id="description"
           cols="30"
           rows="10"
           placeholder="Enter text here"
@@ -53,49 +73,49 @@ export default function Form() {
       <div className="flex container btnarea">
         <button
           disabled={text.length === 0}
-          className="btn btn-blue"
+          className="btn btn-primary"
           onClick={changeToUppercase}
         >
           Convert to Uppercase
         </button>
         <button
           disabled={text.length === 0}
-          className="btn btn-blue"
+          className="btn btn-primary"
           onClick={changeToLowercase}
         >
           Convert to Lowercase
         </button>
         <button
           disabled={text.length === 0}
-          className="btn btn-blue"
+          className="btn btn-primary"
           onClick={clearText}
         >
           Clear Text
         </button>
         <button
           disabled={text.length === 0}
-          className="btn btn-blue"
+          className="btn btn-primary"
           onClick={copyText}
         >
           Copy Text
         </button>
         <button
           disabled={text.length === 0}
-          className="btn btn-blue"
+          className="btn btn-primary"
           onClick={removeExtraSpaces}
         >
           Remove Extra Spaces
         </button>
         <button
           disabled={text.length === 0}
-          className="btn btn-blue"
+          className="btn btn-primary"
           onClick={textReverse}
         >
           Reverse Text
         </button>
         <button
           disabled={text.length === 0}
-          className="btn btn-blue"
+          className="btn btn-primary"
           onClick={textMirror}
         >
           Mirror Text

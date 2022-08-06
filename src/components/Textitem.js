@@ -9,9 +9,13 @@ const Textitem = (props) => {
   return (
     <>
       <div className="card mx-2 my-2">
-        <div className="card-body">
-          <p>{text.description}</p>
-          <i className="fa-solid fa-trash-can m-1" onClick={eraseText}></i>
+        <div className="flex space-between card-body">
+          <div>
+            <p>{text.description}</p>
+          </div>
+          <div className="flex align-baseline center-content">
+            <i className="fa-solid fa-trash-can my-1 mx-3" onClick={eraseText}></i>
+          </div>
         </div>
       </div>
     </>

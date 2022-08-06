@@ -9,24 +9,3 @@
     flex-wrap: wrap;
     align-items: center;
 }
-
-#darkModeEnablerDisabler{
-    border-width: 0px;
-    width: 15vw;
-    min-width: 100px;
-    margin: 5px;
-    padding: 0.375rem 0.375rem;
-    border-radius: 5px;
-    transition: all ease-in 0.15s;
-    font-weight: 600;
-    color: white;
-    background-color: #6013b2;
-}
-
-#darkModeEnablerDisabler:hover{
-    background-color: #710e87;
-}
-
-#darkModeEnablerDisabler:focus:active{
-    background-color: purple;
-}
