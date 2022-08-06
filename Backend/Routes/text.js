@@ -26,7 +26,7 @@ router.post(
     try {
       const text = await Text.create({
         user: req.user.id,
-        text: req.body.text,
+        description: req.body.description,
       });
       res.send(text);
     } catch (error) {

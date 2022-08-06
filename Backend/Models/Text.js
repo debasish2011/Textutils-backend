@@ -6,7 +6,7 @@ const TextSchema = new Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "user",
   },
-  text: {
+  description: {
     type: String,
   },
   date: {

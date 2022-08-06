@@ -11,7 +11,7 @@ app.use(cors())
 app.use(express.json())
 
 app.use('/api/auth', require('./Routes/auth'))
-app.use('/api/search', require('./Routes/search'))
+app.use('/api/text', require('./Routes/text'))
 
 
 app.listen(port,()=>{
